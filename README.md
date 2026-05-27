@@ -1,37 +1,81 @@
-Caesar Cipher: Encryption and Decryption
+# Caesar Cipher: Encryption and Decryption
 
-This Python program allows users to encrypt and decrypt text using the Caesar cipher, a straightforward substitution cipher where each letter in the message is shifted by a fixed number of positions in the alphabet.
+![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+![Interface](https://img.shields.io/badge/interface-CLI-black.svg?logo=gnu-bash)
 
-Features
-Encryption: Secure your messages by shifting each letter using a chosen key.
-Decryption: Easily reverse the process using the same key to reveal the original message.
-Case Sensitivity: Works with both uppercase and lowercase letters, leaving non-alphabetic characters unchanged.
-Easy-to-Use: Offers a user-friendly command-line interface for encryption and decryption.
-Visual Clarity: Displays outputs with different colors for better readability.
-How to Use
-Clone this repository to your computer.
+This Python program allows users to encrypt and decrypt text using the Caesar cipher, a straightforward substitution cipher where each letter in the message is shifted by a fixed number of positions in the alphabet. It now features an immersive, **hacker-themed command-line interface!**
 
-Run the Python script:
+## 📸 Execution Screenshot
 
-python main.py
+*(Replace the placeholder image below with your actual terminal screenshot)*
 
-Select the operation:
+<div align="center">
+  <img src="https://via.placeholder.com/800x400.png?text=Drop+Your+Terminal+Screenshot+Here" alt="Execution Screenshot">
+</div>
 
-Press 1 to encrypt a message.
-Press 2 to decrypt a message.
-Input your message when prompted.
+## 🧠 Methodology
 
-Enter the shift value (integer). This value must be between 0 and 25 or any positive/negative integer. If the value exceeds 25, it wraps around the alphabet.
+The Caesar cipher is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. 
 
-View the result: The program will display the encrypted or decrypted message.
+- **Encryption Formula:** `E_n(x) = (x + n) % 26`
+- **Decryption Formula:** `D_n(x) = (x - n) % 26`
 
-To use the program again, type yes when asked. To exit, type no.
+*(Where `x` is the character position, and `n` is the shift key)*
 
-Example Usage
-Encryption: Choose 1, input your message, and provide a shift value.
-Decryption: Choose 2, input the encrypted message, and use the correct shift value.
-Contributions
+Our implementation is robust: it preserves uppercase and lowercase letters and ignores non-alphabetic characters (like spaces and punctuation), leaving them exactly as they were.
+
+## ✨ Features
+
+- **Encryption:** Secure your messages by shifting each letter using a chosen key.
+- **Decryption:** Easily reverse the process using the same key to reveal the original message.
+- **Case Sensitivity:** Works seamlessly with both uppercase and lowercase letters.
+- **Hacker Aesthetic:** Enjoy a retro terminal feel with color-coded syntax (`root@caesar:~#`).
+- **Visual Clarity:** Displays encrypted output in **Red** and decrypted output in **Yellow** for instant readability.
+
+## 🚀 How to Use
+
+1. Clone this repository to your local machine.
+2. Run the Python script from your terminal:
+
+   ```bash
+   python main.py
+   ```
+
+3. Select the operation module:
+   - Enter `1` to **encrypt** a message.
+   - Enter `2` to **decrypt** a message.
+4. Input your message when prompted.
+5. Enter the shift value (integer). The script safely handles large numbers by wrapping them around the alphabet dynamically.
+6. View the result and execute another sequence if desired!
+
+## 💡 Example Usage
+
+```text
+[?] Select operation module:
+  Encrypt message
+  Decrypt message
+
+root@caesar:~# 1
+
+[?] Enter message to process:
+root@caesar:~# Secret Payload!
+
+[?] Enter shift key (integer):
+root@caesar:~# 5
+
+[*] Initializing cipher engine...
+[*] Executing encode sequence...
+
+[+] OPERATION SUCCESSFUL. Output:
+>>> Xjhwjy Ufdqtfi!
+```
+
+## 🤝 Contributions
+
 Contributions and feedback are welcome! Fork this repository and submit pull requests to improve the program.
 
-License
+## 📜 License
+
 This project is available under the MIT License.
