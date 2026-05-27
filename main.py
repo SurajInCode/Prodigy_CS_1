@@ -6,10 +6,12 @@ def caesar(start_text, shift_amount, cipher_direction):
     if cipher_direction == "decode":
         shift_amount *= -1
     for char in start_text:
-        if char in alphabet:
-            position = alphabet.index(char)
+        if char.lower() in alphabet:
+            is_upper = char.isupper()
+            position = alphabet.index(char.lower())
             new_position = (position + shift_amount) % len(alphabet)
-            end_text += alphabet[new_position]
+            new_char = alphabet[new_position]
+            end_text += new_char.upper() if is_upper else new_char
         else:
             end_text += char
     return end_text
@@ -36,7 +38,7 @@ while not should_end:
         else:
             print("Invalid option. Please enter 1 for encode or 2 for decode.")
 
-    text = input("Type your message:\n").lower()
+    text = input("Type your message:\n")
     
     # Input validation for shift
     while True:
@@ -46,7 +48,7 @@ while not should_end:
         except ValueError:
             print("Please enter a valid number for the shift.")
 
-    shift = shift % 26  # Normalize the shift value
+    shift = shift % len(alphabet)  # Normalize the shift value dynamically
     cipher_direction = "encode" if direction == '1' else "decode"
     
     result = caesar(start_text=text, shift_amount=shift, cipher_direction=cipher_direction)
