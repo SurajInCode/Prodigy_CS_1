@@ -1,7 +1,7 @@
 # Caesar Cipher: Encryption and Decryption
 
 ![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 ![Interface](https://img.shields.io/badge/interface-CLI-black.svg?logo=gnu-bash)
 
@@ -9,10 +9,8 @@ This Python program allows users to encrypt and decrypt text using the Caesar ci
 
 ## 📸 Execution Screenshot
 
-*(Replace the placeholder image below with your actual terminal screenshot)*
-
 <div align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Drop+Your+Terminal+Screenshot+Here" alt="Execution Screenshot">
+  <img src="./Screenshot.png" alt="Execution Screenshot">
 </div>
 
 ## 🧠 Methodology
@@ -78,4 +76,4 @@ Contributions and feedback are welcome! Fork this repository and submit pull req
 
 ## 📜 License
 
-This project is available under the MIT License.
+This project is available under the [MIT License](LICENSE).
